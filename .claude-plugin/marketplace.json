@@ -1,0 +1,13 @@
+{
+  "name": "so-what-mece",
+  "owner": {
+    "name": "junhyuk-yoon"
+  },
+  "plugins": [
+    {
+      "name": "so-what-mece",
+      "source": "./",
+      "description": "So What · Why So · MECE 원칙으로 업무 문서를 쓰고 고치는 스킬"
+    }
+  ]
+}
