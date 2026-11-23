@@ -101,12 +101,17 @@ It holds three lines.
 - The original document is not overwritten : the revision is delivered separately
 - When asked to edit in place, it changes only the requested part
 
-## 5. Install : two commands
+## 5. Install : two commands, entered one at a time
 
-Install as a plugin in Claude Code.
+Install as a plugin in Claude Code. Enter the commands one at a time. Pasting both lines together runs them as one command and fails.
 
 ```
 /plugin marketplace add junhyuk-yoon/pyramid-writing
+```
+
+Then install the plugin.
+
+```
 /plugin install pyramid-writing@pyramid-writing
 ```
 

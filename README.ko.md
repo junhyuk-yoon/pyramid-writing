@@ -99,12 +99,17 @@
 - 원본 문서는 덮어쓰지 않고 고친 본을 따로 제시
 - 직접 수정을 요청받아도 요청받은 부분만 수정
 
-## 5. 설치 : 명령 두 줄
+## 5. 설치 : 명령 두 줄을 한 줄씩 입력
 
-Claude Code에서 플러그인으로 설치합니다.
+Claude Code에서 플러그인으로 설치합니다. 명령은 한 줄씩 따로 입력합니다. 두 줄을 한꺼번에 붙여 넣으면 한 명령으로 인식되어 실패합니다.
 
 ```
 /plugin marketplace add junhyuk-yoon/pyramid-writing
+```
+
+이어서 플러그인을 설치합니다.
+
+```
 /plugin install pyramid-writing@pyramid-writing
 ```
 
