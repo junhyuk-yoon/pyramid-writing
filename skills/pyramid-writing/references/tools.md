@@ -1,107 +1,107 @@
-# 도구별 출력 방법
+# Formatting per tool
 
-원칙과 구조는 도구와 무관하다. 여기에는 같은 구조를 각 도구의 기능으로 옮기는 방법만 적는다. 대상 도구에 해당하는 항목만 읽는다.
+The principles and the structure do not depend on the tool. This file only maps the same structure onto each tool's features. Read only the entry for your target tool.
 
-도구에 없는 기능은 억지로 흉내 내지 않고 아래 "기능이 없을 때" 표를 따라 단순한 형태로 바꾼다.
+When a tool lacks a feature, do not imitate it. Fall back to the simpler form in "When a feature is missing".
 
-## 목차
+## Contents
 
-- 공통 대응표
+- Common mapping
 - Confluence (Atlassian)
 - Google Docs
 - Notion
 - Microsoft Word
 - Apple Notes
-- Markdown (GitHub, 터미널 등)
-- Slack과 메신저
-- 이메일
-- 기능이 없을 때
+- Markdown (GitHub, terminal)
+- Slack and chat
+- Email
+- When a feature is missing
 
-## 공통 대응표
+## Common mapping
 
-| 문서 요소 | 역할 |
+| Element | Role |
 |---|---|
-| 문서 제목 | 주제와 상태를 한 줄로 |
-| 맨 위 요약 | 결론 한두 문장(분석, 제안, 검토 문서) |
-| 섹션 제목 | 번호 + 결론 문장 |
-| 1단계 불릿 | 결론 |
-| 2단계 불릿 | 근거 수치, 출처 |
-| 표 | 비교, 일정, 전후 변화, 담당 |
-| 비고 | 한계, 추정, 기준 차이 |
+| Document title | Topic and status in one line |
+| Top summary | Conclusion in one or two sentences (analysis, proposal, review) |
+| Section heading | Number plus conclusion |
+| First-level bullet | Conclusion |
+| Second-level bullet | Evidence, numbers, source |
+| Table | Comparison, schedule, before and after, ownership |
+| Notes | Limits, estimates, differences in basis |
 
 ## Confluence (Atlassian)
 
-- 섹션 제목은 '제목 2', 하위는 '제목 3', '제목 4'를 쓴다. 섹션 제목 아래에 구분선을 넣으면 긴 문서에서 구획이 잘 보인다.
-- 날짜, 사람, 진행 상태, 링크는 글자로 쓰지 않고 날짜 매크로, 멘션, 상태 표시, 스마트 링크를 쓴다. 검색과 알림에 잡히고 나중에 고치기 쉽다. 단, '매월 5일', '다음 주'처럼 대략적인 표현은 글자로 둔다.
-- 상태 표시의 색은 문서 전체에서 한 가지 규칙으로 쓴다(예: 완료, 진행 중, 시작 전에 각각 한 색).
-- 요약이나 주의에는 정보 패널을 쓸 수 있으나, 표와 번호로 이미 분명하면 생략한다.
-- 표 셀 안에서 불릿을 쓸 수 있으므로 셀은 불릿 3줄 이내로 쓴다.
-- 기존 페이지를 API로 고칠 때는 본문 전체가 덮어써진다. 저장 직전에 최신 본문을 다시 가져오고, 요청받은 부분만 바꾼 뒤, 나머지는 그대로 저장한다.
+- Use Heading 2 for sections and Heading 3 and 4 below. A divider under each section heading helps in long pages.
+- Use the date element, mentions, status lozenges, and smart links for dates, people, status, and links. They are searchable, trigger notifications, and are easy to update. Keep rough expressions ("the 5th of every month", "next week") as text.
+- Use one color rule for status across the page (one color each for done, in progress, not started).
+- Info panels are optional. Skip them when tables and numbering already make the point.
+- Cells can hold bullets, so write up to three bullets per cell.
+- Updating a page through the API overwrites the whole body. Fetch the latest body right before saving, replace only the requested part, and save the rest unchanged.
 
 ## Google Docs
 
-- 제목 스타일(제목 1~4)을 사용한다. 글자 크기만 키운 제목은 목차와 개요 창에 잡히지 않는다.
-- 번호 목록의 단계는 1 → a → i가 기본이다. 섹션 번호(`2-1`)는 제목 글자에 직접 적는다.
-- 날짜, 사람, 파일은 스마트 칩(@ 입력)을 쓸 수 있다.
-- 표 셀 안에서 불릿을 쓸 수 있다. 표 폭은 본문 폭에 맞춘다.
-- 다른 곳에서 만든 글을 붙여 넣을 때는 제목 스타일과 목록 단계가 유지되는지 확인한다.
+- Use heading styles (Heading 1 to 4). Text that is only enlarged does not appear in the outline or table of contents.
+- Numbered list levels default to 1 → a → i. Type section numbers (`2-1`) directly in the heading text.
+- Smart chips (type @) work for dates, people, and files.
+- Cells can hold bullets. Fit table width to the page.
+- When pasting from elsewhere, check that heading styles and list levels survived.
 
 ## Notion
 
-- 섹션 제목은 제목 1~3을 쓴다. 3단계보다 깊은 구조는 토글이나 하위 페이지로 내린다.
-- 맨 위 요약과 주의에는 콜아웃을 쓴다.
-- 항목이 반복되고 상태, 담당, 날짜가 붙는 표(진행 현황, 일정)는 단순 표 대신 데이터베이스로 만든다. 상태는 선택 속성, 날짜는 날짜 속성, 담당은 사람 속성을 쓴다.
-- 단순 표의 셀에는 불릿이 들어가지 않는다. 짧은 구로 쓰고, 여러 줄이 필요하면 셀 안에서 줄을 바꾼다.
-- 날짜와 사람은 @ 멘션으로 넣는다.
+- Use Heading 1 to 3. Put anything deeper into toggles or sub-pages.
+- Use a callout for the top summary and for warnings.
+- For tables of repeating items with status, owner, and date (trackers, schedules), use a database, not a simple table. Use select for status, date for dates, person for owners.
+- Simple table cells cannot hold bullets. Write short phrases and use line breaks inside the cell when needed.
+- Insert dates and people with @ mentions.
 
 ## Microsoft Word
 
-- 제목 스타일(제목 1~3)을 쓴다. 목차 자동 생성과 탐색 창이 이 스타일을 읽는다.
-- 섹션 번호는 다단계 목록을 제목 스타일에 연결하거나, 제목에 직접 적는다. 한 문서에서 두 방식을 섞지 않는다.
-- 표의 첫 행은 머리글 행으로 지정해 쪽이 넘어가도 반복되게 한다.
-- 맨 위 요약은 본문 첫 단락에 굵게 한두 문장으로 쓴다.
-- 인쇄하거나 PDF로 보낼 문서이므로 링크는 글자에 걸되, 중요한 출처는 문서 이름도 함께 적는다.
+- Use heading styles (Heading 1 to 3). The automatic table of contents and navigation pane read them.
+- Number sections either by linking a multilevel list to heading styles or by typing numbers in the heading. Do not mix both in one document.
+- Mark the first table row as a header row so it repeats across pages.
+- Put the top summary in the first paragraph, bold, one or two sentences.
+- The document may be printed or exported to PDF, so link the text and also write the name of key sources.
 
 ## Apple Notes
 
-기능이 적으므로 구조를 단순하게 가져간다.
+The feature set is small, so keep the structure simple.
 
-- 첫 줄이 메모 제목이 된다. 제목에 결론을 담는다.
-- 서식은 제목, 머리말, 부머리말, 본문 정도만 있다. 섹션은 '머리말', 하위는 '부머리말'로 두고 번호는 글자로 적는다.
-- 불릿은 들여쓰기로 2단계까지만 쓴다(결론, 근거).
-- 표는 단순한 행과 열만 가능하고 셀 안에 불릿을 넣을 수 없다. 3열 이내의 짧은 표만 쓰고, 그보다 복잡하면 불릿으로 푼다.
-- 할 일은 체크리스트로 쓴다.
-- 날짜와 담당은 글자로 적는다.
+- The first line becomes the note title. Put the conclusion in it.
+- Styles are limited to Title, Heading, Subheading, and Body. Use Heading for sections and Subheading below, and type numbers as text.
+- Use two bullet levels at most (conclusion, evidence).
+- Tables are plain rows and columns, and cells cannot hold bullets. Use short tables of up to three columns. Turn anything more complex into bullets.
+- Use checklists for to-dos.
+- Type dates and owners as text.
 
-## Markdown (GitHub, 터미널 등)
+## Markdown (GitHub, terminal)
 
-- 섹션 제목은 `##`, 하위는 `###`, `####`를 쓴다.
-- 표 셀 안에는 불릿과 줄바꿈이 들어가지 않는다. 셀은 짧은 구로 쓰고 보조 설명은 ` : `로 잇는다. HTML 태그(`<br>`, `<ul>`)는 터미널에서 글자 그대로 보이므로 쓰지 않는다. 셀에 담기 어려우면 표를 쪼개거나 불릿으로 푼다.
-- 코드, 쿼리, 설정 값은 코드 블록에 넣고, 맨 위 주석에 출처와 기준을 적는다.
+- Use `##` for sections and `###`, `####` below.
+- Table cells cannot hold bullets or line breaks. Write short phrases and attach supporting notes with ` : `. HTML tags (`<br>`, `<ul>`) show up as literal text in a terminal, so do not use them. If content does not fit a cell, split the table or use bullets.
+- Put code, queries, and config values in code blocks, with the source and basis in a comment at the top.
 
-## Slack과 메신저
+## Slack and chat
 
-- 첫 줄에 결론을 쓴다. 알림 미리 보기에는 첫 줄만 보인다.
-- 제목 기능이 없으므로 굵은 글씨 한 줄을 소제목으로 쓴다.
-- 불릿은 2단계까지만 쓴다.
-- 표는 화면 폭에 따라 깨지기 쉽다. 3열 이내로 쓰거나 불릿으로 푼다. 표 다음에는 빈 줄을 두고, 해석은 표 밖에 적는다.
-- 긴 내용은 본문에 요약만 쓰고 나머지는 스레드나 문서 링크로 넘긴다.
+- Put the conclusion on the first line. Notification previews show only that.
+- There are no headings, so use one bold line as a subheading.
+- Use two bullet levels at most.
+- Tables break on narrow screens. Keep them to three columns or use bullets. Leave a blank line after a table and put interpretation outside it.
+- For long content, write the summary in the message and move the rest to a thread or a linked document.
 
-## 이메일
+## Email
 
-- 제목 줄에 결론이나 요청을 쓴다(`[결정 요청] 무료 배송 전체 확대 : 금요일까지 회신`).
-- 본문 첫 단락에 결론과 상대에게 바라는 행동을 쓴다.
-- 받는 쪽 프로그램에 따라 서식이 사라질 수 있으므로, 서식이 없어도 읽히게 번호와 줄바꿈으로 구조를 만든다.
-- 인사와 맺음말은 한 줄씩만 둔다.
+- Put the conclusion or the ask in the subject line (`[Decision needed] Roll out free shipping to all stores : reply by Friday`).
+- Put the conclusion and what you need from the reader in the first paragraph.
+- Formatting can disappear in the recipient's client, so build structure with numbers and line breaks that survive as plain text.
+- One line each for greeting and sign-off.
 
-## 기능이 없을 때
+## When a feature is missing
 
-| 없는 기능 | 대신 쓰는 방법 |
+| Missing feature | Use instead |
 |---|---|
-| 제목 스타일 | 굵은 글씨 한 줄 + 번호 |
-| 셀 안 불릿 | 짧은 구, ` : `로 연결, 또는 표를 불릿으로 풀기 |
-| 날짜, 사람, 상태 기능 | 글자로 적기(날짜는 `2025-03-14`처럼 연월일 모두) |
-| 접기(토글) | 본문 끝에 '상세' 섹션을 따로 두기 |
-| 콜아웃, 패널 | 맨 위에 굵은 글씨로 한두 문장 |
-| 표 | 항목별 불릿(항목 이름 → 하위에 속성) |
-| 3단계 이상 들여쓰기 | 하위 섹션으로 나누기 |
+| Heading styles | One bold line plus a number |
+| Bullets in cells | Short phrases joined with ` : `, or turn the table into bullets |
+| Date, person, status elements | Plain text (full dates such as `2025-03-14`) |
+| Toggles | A separate "Details" section at the end |
+| Callouts, panels | One or two bold sentences at the top |
+| Tables | Bullets per item (item name, then attributes below) |
+| Three or more indent levels | Split into subsections |

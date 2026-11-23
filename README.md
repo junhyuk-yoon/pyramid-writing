@@ -1,5 +1,7 @@
 # Writing with The Pyramid Principle
 
+English | [한국어](README.ko.md)
+
 **A Claude skill that writes and edits business documents so the conclusion is readable from the headings alone.**
 
 Give it a document link or pasted text. It diagnoses the document with three questions (So What, Why So, MECE) and returns a revised version. The same principles apply to Confluence, Google Docs, Notion, Word, Apple Notes, Markdown, Slack, and email. Only the formatting changes per tool.
@@ -164,21 +166,24 @@ In tools without headings or tables, it builds the same structure from one bold 
 - Is ` : ` the only separator
 - Are translationese and stock closing phrases gone
 
-## 9. Files : one rule file and two references
+## 9. Files : one rule file and four references
 
 ```
 skills/pyramid-writing/
 ├── SKILL.md              all rules and the workflow
 └── references/
-    ├── tools.md          formatting per tool
-    └── ai-tells.md       AI-style patterns to remove
+    ├── ai-tells.en.md    AI-style patterns to remove (English)
+    ├── ai-tells.ko.md    AI-style patterns to remove (Korean)
+    ├── korean.md         Korean phrasing rules and Korean examples
+    └── tools.md          formatting per tool
 ```
 
-## 10. Language : written in Korean, usable in any language
+## 10. Language : English and Korean documents are both supported
 
-- The skill files are written in Korean and tuned for Korean business documents
-- The structural rules (So What, Why So, MECE, one separator) apply to any language
-- The AI-style list in `ai-tells.md` targets Korean patterns : in other languages the skill applies the concise report style of that language
+- The document is written in the language the user writes in
+- English : applies the English AI-style list
+- Korean : applies Korean phrasing rules and the Korean AI-style list
+- Other languages : the structural rules apply as they are, and the tone follows that language's concise report style
 
 ## 11. Priority : your team's conventions come first
 
@@ -189,7 +194,7 @@ skills/pyramid-writing/
 
 - Barbara Minto, *The Pyramid Principle: Logic in Writing and Thinking* : the source of the pyramid structure and MECE
 - Hanako Teruya and Keiko Okada, *Logical Thinking* : the So What, Why So, MECE set
-- [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai) (MIT) : the taxonomy behind the AI-style list, trimmed for business documents
+- [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai) (MIT) : the taxonomy behind the Korean AI-style list, trimmed for business documents
 
 This is a personal project with no affiliation with the authors or publishers above. For polishing long-form prose in Korean, use im-not-ai alongside this skill.
 

@@ -1,178 +1,186 @@
 ---
 name: pyramid-writing
-description: 피라미드 원칙(Pyramid Principle)의 So What · Why So · MECE로 업무 문서를 쓰고 고치는 스킬. 보고서, 주간 보고, 회의록, 기획안, 제안서, 분석 리포트, 위키 페이지, 메모를 작성·요약·교정할 때 사용한다. Confluence, Google Docs, Notion, Word, Apple Notes, Markdown, Slack, 이메일 등 어떤 도구에 쓰든 적용한다. 사용자가 "보고서 써줘", "문서 정리해줘", "회의록 정리", "개조식으로", "결론부터", "두괄식으로", "MECE하게", "피라미드 구조로", "이 글 다듬어줘", "write a report", "status update", "executive summary"처럼 말하거나, 문서 링크나 본문을 주면서 고쳐 달라, 검토해 달라고 하면 원칙 이름을 직접 언급하지 않아도 이 스킬을 쓴다. 소설·에세이·광고 문구 같은 창작 글과 코드 주석에는 쓰지 않는다.
+description: Write and edit business documents with the Pyramid Principle (So What, Why So, MECE). Use for reports, weekly updates, meeting notes, plans, proposals, analysis write-ups, wiki pages, memos, and work email, in any tool (Confluence, Google Docs, Notion, Word, Apple Notes, Markdown, Slack, email) and any language. Use it whenever the user says things like "write a report", "status update", "executive summary", "conclusion first", "tighten this doc", "make it MECE", "보고서 써줘", "문서 정리해줘", "회의록 정리", "개조식으로", "결론부터", "두괄식으로", "피라미드 구조로", "이 글 다듬어줘", or shares a document link or pasted text and asks to fix or review it, even if they never name the principles. Do not use for fiction, essays, ad copy, or code comments.
 ---
 
 # Writing with The Pyramid Principle
 
-업무 문서의 독자는 바쁘고, 문서를 끝까지 읽지 않는다. 그래서 결론을 꼭대기에 두고 근거를 아래로 쌓는 피라미드 구조로 쓴다. 피라미드는 세 가지 질문으로 점검한다. 아래에서 위로 읽으면 So What에, 위에서 아래로 읽으면 Why So에 답이 되어야 하고, 같은 층의 항목끼리는 MECE여야 한다.
+Readers of business documents are busy and rarely read to the end. So put the conclusion on top and stack the evidence below it. Check the pyramid with three questions.
 
-- **So What** : 그래서 결론이 무엇이고, 무엇을 해야 하는가
-- **Why So** : 왜 그렇게 말할 수 있는가
-- **MECE** : 빠진 것과 겹치는 것은 없는가
+- **So What** (bottom to top) : what is the conclusion, and what should we do
+- **Why So** (top to bottom) : why can we say that
+- **MECE** (same level) : is anything missing or duplicated
 
-제목과 굵은 줄만 훑어도 결론이 전달되고, 의심이 드는 독자는 바로 아래에서 근거를 찾을 수 있으면 잘 쓴 문서다.
+A document works when a reader who skims only the headings and bold lines gets the conclusion, and a skeptical reader finds the evidence right below.
 
-## 작업 순서
+## Language
 
-1. **독자와 용도를 정한다.** 누가 읽고 무엇을 결정하는지 모르면 결론을 고를 수 없다. 대화에서 알 수 없고 추정도 어려우면 한 번만 묻는다.
-2. **결론을 먼저 뽑는다.** 본문을 쓰기 전에 "이 문서의 결론 한 줄"과 "섹션별 결론 한 줄"을 적는다. 결론이 안 나오면 자료가 부족하거나 생각이 덜 된 것이므로, 그 사실을 사용자에게 말한다.
-3. **구조를 짠다.** 섹션을 겹치지 않게 나누고 번호를 붙인다.
-4. **근거를 채운다.** 결론마다 바로 아래에 수치와 출처를 둔다.
-5. **덜어낸다.** 아래 "덜어내는 것" 목록으로 한 번 훑는다.
-6. **AI 문체를 걷어낸다.** 아래 "AI 문체 걷어내기"로 한 번 더 훑는다.
-7. **도구에 맞게 출력한다.** 구조는 같고 서식만 달라진다. 대상 도구가 정해져 있으면 `references/tools.md`에서 해당 도구 항목을 읽고 맞춘다.
+Write the document in the language the user is writing in, or the language of the source document.
 
-## 문서 링크나 본문을 받았을 때
+- Korean : read `references/korean.md` first. It holds the Korean phrasing conventions and Korean examples for every rule here.
+- AI-style cleanup : read `references/ai-tells.ko.md` for Korean, `references/ai-tells.en.md` for English. For other languages, apply the same categories in that language.
 
-사용자가 문서 링크나 본문만 주고 별다른 설명을 하지 않으면, 이 원칙에 맞게 고쳐 달라는 뜻으로 본다.
+## Workflow
 
-1. **문서를 읽는다.** 해당 도구에 연결된 기능(커넥터, MCP, 브라우저 등)이 있으면 그것으로 읽는다. 로그인이 필요한 문서를 일반 웹 요청으로 읽으려 하지 않는다. 읽을 수 없으면 본문을 붙여 넣어 달라고 한다.
-2. **진단을 먼저 짧게 알린다.** 세 축(So What, Why So, MECE)별로 가장 큰 문제를 한두 줄씩 적는다. 문제없는 축은 '문제없음'이라고 쓴다.
-3. **고친 본을 만든다.** 원문의 사실, 수치, 고유명사는 바꾸지 않는다. 원문에 근거가 없는 결론은 지어내지 않고 '근거 필요'라고 표시한다.
-4. **원본은 덮어쓰지 않는다.** 고친 본은 대화에 보여 주거나 새 문서로 만든다. 원본을 직접 수정하는 것은 사용자가 그렇게 요청했을 때만 하고, 그때는 아래 "기존 문서를 고칠 때"를 따른다.
-5. **같은 도구의 서식으로 돌려준다.** 링크로 받은 문서는 그 도구에 다시 붙여 넣을 것이므로 `references/tools.md`의 해당 항목에 맞춘다.
+1. **Fix the reader and the purpose.** You cannot pick a conclusion without knowing who reads this and what they decide. If the conversation does not tell you and you cannot infer it, ask once.
+2. **Extract the conclusions first.** Before writing the body, write one line for the document's conclusion and one line per section. If no conclusion comes out, the material is thin or the thinking is unfinished. Tell the user so.
+3. **Build the structure.** Split sections so they do not overlap, and number them.
+4. **Fill in the evidence.** Put numbers and sources right below each conclusion.
+5. **Cut.** Run the "What to cut" list below.
+6. **Remove AI style.** Run the "AI-style cleanup" section below.
+7. **Format for the tool.** The structure stays the same and only formatting changes. If the target tool is known, read its entry in `references/tools.md`.
 
-## 1. So What : 결론을 먼저, 한 줄로
+## When given a link or pasted text
 
-- **제목이 곧 결론이다.** 소제목을 주제어로 두지 않고 결론 문장으로 쓴다. 독자가 목차만 봐도 내용을 알 수 있어야 한다.
-  - 주제어 : `3. 재구매율 현황`
-  - 결론 : `3. 재구매율 하락 : 첫 구매 후 30일 내 이탈이 원인`
-- **1단계 불릿은 결론 한 줄이다.** 한국어 업무 문서에서는 명사형으로 끝낸다(~중, ~필요, ~미확인, ~결정). 구두 설명체('~습니다', '~인데요')는 쓰지 않는다.
-- **블록마다 굵은 글씨는 한 줄만 쓴다.** 판단이나 결정이 담긴 줄만 굵게 한다. 여러 줄이 굵으면 아무것도 강조되지 않는다.
-- **데이터에서 액션까지 화살표로 잇는다.** 수치만 적고 끝내지 않고 무엇을 할지 붙인다.
-  - `재구매 고객의 62%가 알림 수신자 → 첫 구매 직후 알림 동의 유도`
-- **액션은 직접 움직일 수 있는 것만 적는다.** 지켜보기만 할 수 있는 항목은 액션이 아니라 모니터링으로 분류한다.
-- **결정 제목에는 단서를 달지 않는다.** 한계와 조건은 하위 불릿으로 내린다. 제목에 괄호 단서가 붙으면 결정이 났는지 독자가 알 수 없다.
-  - 단서 있음 : `무료 배송 : 유효(단, 장기 효과는 추가 검증 필요)`
-  - 단서 없음 : `무료 배송 유효 판정 : 다음 달 전체 확대`
+If the user gives only a link or text with no further instruction, treat it as a request to revise it by these principles.
 
-## 2. Why So : 결론마다 근거를 바로 아래에
+1. **Read the document.** Use whatever is connected for that tool (connector, MCP, browser). Do not try to fetch a login-protected document with a plain web request. If you cannot read it, ask the user to paste the text.
+2. **Report a short diagnosis first.** One or two lines per axis (So What, Why So, MECE) on the biggest problem. Write "no issue" for an axis that is fine.
+3. **Write the revision.** Do not change facts, numbers, or proper nouns. Do not invent evidence the original lacks. Mark it "evidence needed".
+4. **Do not overwrite the original.** Show the revision in the conversation or create a new document. Edit the original in place only when asked, and then follow "Editing an existing document" below.
+5. **Return it in the same tool's formatting.** A linked document will be pasted back into that tool, so follow its entry in `references/tools.md`.
 
-- **2단계 불릿은 근거다.** 결론 바로 아래에 수치와 사실을 둔다. 표의 셀도 결론 → 근거 → 보조 순서로 쓴다.
-- **확신 없는 요인은 요약에서 뺀다.** 요약에 적는 원인은 데이터로 확인된 것만 남긴다. 추정은 본문이나 비고에 "추정"이라고 밝히고 적는다. 요약에 추정이 섞이면 독자는 전부를 사실로 읽는다.
-- **출처를 적는다.** 결정 항목의 첫 하위 불릿에 근거 문서 링크를 둔다. 수치에는 집계 기간, 기준, 제외 조건을 표 위나 주석에 적는다.
-- **의사결정은 근거 → 결론 → 사후관리 순으로 남긴다.** 사후관리에는 언제 다시 볼지 숫자로 적고, 비율과 절대값을 함께 쓴다.
-  - `환불 건수가 직전 3개월 평균의 200% 이상(월 90건 초과)이면 재검토`
-- **원인은 구체적으로 특정한다.** "실적 부진", "볼륨 감소"처럼 뭉뚱그리지 않고 어느 단계에서 줄었는지 적는다(방문, 전환, 객단가 등).
-- **인과를 단정하지 않는다.** 같이 움직였다는 사실만으로 원인이라고 쓰지 않는다.
+## 1. So What : conclusion first, in one line
 
-## 3. MECE : 겹치지 않고 빠짐없이
+- **The heading is the conclusion.** Write section headings as conclusions, not topics. The table of contents alone should tell the story.
+  - Topic : `3. Repurchase rate status`
+  - Conclusion : `3. Repurchase rate is falling : customers leave within 30 days of first purchase`
+- **A first-level bullet is one conclusion line.** Keep it short and declarative. Drop spoken filler such as "we are pleased to share" or "as you can see".
+- **One bold line per block.** Bold only the line that carries the judgment or decision. When several lines are bold, nothing stands out.
+- **Connect data to action with an arrow.** Do not stop at the number. Attach what to do.
+  - `62% of repeat buyers have notifications on → prompt for notification consent right after first purchase`
+- **List only actions you can take.** Things you can only watch are monitoring, not actions.
+- **No caveats in a decision heading.** Move limits and conditions to sub-bullets. A parenthetical caveat in the heading leaves the reader unsure whether a decision was made.
+  - With caveat : `Free shipping : effective (though long-term effect needs more validation)`
+  - Without : `Free shipping judged effective : roll out to all stores next month`
 
-- **불릿 하나에 지표 하나.** 여러 지표를 가운뎃점이나 쉼표로 한 줄에 잇지 않는다. 묶는 이름만 상위 불릿에 두고 지표는 하위 불릿으로 한 줄씩 나눈다. 한 줄에 여러 숫자가 있으면 독자는 무엇이 핵심인지 고를 수 없다.
+## 2. Why So : evidence right below every conclusion
+
+- **A second-level bullet is evidence.** Numbers and facts sit directly under the conclusion. Table cells follow the same order : conclusion, evidence, supporting detail.
+- **Keep unconfirmed causes out of the summary.** Causes in a summary must be confirmed by data. Put guesses in the body or Notes and label them "estimate". When guesses mix into a summary, readers take everything as fact.
+- **Cite the source.** Put the link to the supporting document in the first sub-bullet of a decision. State the period, basis, and exclusions for numbers above the table or in a note.
+- **Record decisions as evidence → conclusion → follow-up.** State the follow-up trigger as a number, with both a ratio and an absolute value.
+  - `Review again if refunds reach 200% of the prior 3-month average (over 90 per month)`
+- **Name the specific cause.** Not "weak performance" or "lower volume". Say which stage dropped (visits, conversion, order value).
+- **Do not assert causation.** Two things moving together is not proof that one caused the other.
+
+## 3. MECE : no overlaps, no gaps
+
+- **One metric per bullet.** Do not chain several metrics on one line with commas or dots. Keep only the grouping label on the parent bullet and give each metric its own sub-bullet. With several numbers on one line, the reader cannot tell which one matters.
 
   ```
-  나쁨 : 참여 매장 매출 1.9배 · 주문 1.8배 · 전환율 6.4 → 9.8%
+  Bad  : Participating stores revenue 1.9x, orders 1.8x, conversion 6.4% → 9.8%
 
-  좋음 : 참여 매장
-          - 매출 1.9배
-          - 주문 1.8배
-          - 전환율 6.4 → 9.8%
+  Good : Participating stores
+           - Revenue 1.9x
+           - Orders 1.8x
+           - Conversion 6.4% → 9.8%
   ```
 
-- **요약의 범위는 아래 표의 범위와 같다.** 표가 일부 대상만 다루면 요약도 그 대상으로 한정하고, 소제목에 기준을 적는다(`지역별 매출 : 전년 동기 대비, 앱 기준`).
-- **항목은 제자리에 둔다.** 하위 결정은 그것이 속한 상위 주제 아래에 둔다. 같은 내용이 두 섹션에 나오면 한 곳으로 모은다.
-- **섹션은 같은 기준으로 나눈다.** 한 층위 안에서는 분류 축을 하나만 쓴다(지역별이면 끝까지 지역별). 축이 섞이면 겹침과 누락이 생긴다.
-- **번호 체계로 구조를 고정한다.** `1.` → `1-1` → `1-1-1` 순으로 쓴다. 번호가 있으면 회의에서 "2-3 보시면"처럼 가리킬 수 있다.
-- **불리한 정보도 빼지 않는다.** 표본이 0건인 항목, 추정치, 기준이 서로 다른 수치, 이상 신호는 '주의사항' 또는 '비고' 섹션에 모아 둔다. 보기 좋게 하려고 빼면 문서 전체를 믿을 수 없게 된다.
+- **The summary covers exactly what the table covers.** If the table covers a subset, limit the summary to that subset and state the basis in the subheading (`Revenue by region : year over year, app only`).
+- **Put each item where it belongs.** A sub-decision goes under its parent topic. If the same content appears in two sections, merge it into one.
+- **Split sections on one axis.** Within one level, use a single classification axis (if by region, by region throughout). Mixed axes create overlaps and gaps.
+- **Fix the structure with numbering.** Use `1.` → `1-1` → `1-1-1`. Numbers let people point to "see 2-3" in a meeting.
+- **Do not drop unfavorable information.** Items with zero samples, estimates, numbers on different bases, and warning signs go in a "Caveats" or "Notes" section. Removing them to look clean makes the whole document untrustworthy.
 
-## 4. 표현
+## 4. Expression
 
-- **구분 기호는 ` : `로 고정한다.** 제목이나 불릿에서 이름과 내용을 가를 때, 보조 설명을 이을 때 모두 앞뒤로 한 칸씩 띄운 쌍점을 쓴다. 줄 중간에서 구분 기호로 쓴 줄표(—, –)만 쌍점으로 바꾼다. 줄 맨 앞의 불릿 기호 `-`는 줄을 나누는 표시이므로 그대로 쓴다. 기호가 하나로 고정되어 있으면 독자가 '이름 : 내용' 구조를 바로 읽고, 줄표가 반복되는 글은 기계가 쓴 글처럼 보인다.
-  - 줄표 : `1. 정의 — 성과 상위 매장과 여는 1개월 이내 공동 행사`
-  - 쌍점 : `1. 정의 : 성과 상위 매장과 여는 1개월 이내 공동 행사`
-  - 불릿은 그대로 : `- 장기 효과 미확인 : 4주 뒤 재확인`처럼 줄 앞의 `-`는 남기고 줄 중간의 줄표만 바꾼다.
-  - 화살표(→)는 구분 기호가 아니라 '데이터에서 액션', '이전 값에서 이후 값'을 나타낼 때만 쓴다.
-- **용어는 하나로 통일한다.** 지표와 프로그램은 정식 명칭 하나만 쓴다. 같은 것을 '단가', '객단가', 'ASP'로 섞어 쓰면 독자는 서로 다른 지표로 읽는다.
-- **내부 ID 대신 이름을 쓴다.** 독자가 기억하는 것은 번호가 아니라 이름이다.
-- **구어체 수치 표현을 쓰지 않는다.** '반토막', '폭망' 대신 '급감', '급증'을 쓰고 수치를 붙인다.
-- **숫자에는 단위를 붙인다.** 금액과 건수는 천 단위 쉼표, 비율은 %로 쓴다. 표에서는 단위를 표 위나 머리글에 한 번 적는다.
-- **확정되지 않은 일정과 약속은 단정하지 않는다.** '내년 추진' 대신 '가능성 검토 후 추진 판단'처럼 쓴다.
-- **표를 적극적으로 쓴다.** 비교, 일정, 전후 변화, 담당 정리는 문장보다 표가 빠르다.
-  - 셀은 문장이 아니라 짧은 구 또는 불릿 3줄 이내로 쓴다.
-  - 표 안에서는 굵은 글씨를 쓰지 않는다. 강조는 표 밖 문장에서 한다.
-  - 항목 열은 명사형 이름표로 쓴다(`1. 환불률 추이`). 질문형이나 서술형으로 쓰지 않는다.
-  - 데이터 표의 마지막에는 합계 행을 둔다.
-- **미완 항목은 `TBD`와 예정 시점을 함께 적는다.** `TBD (다음 주 2차 시안 예정)`
+- **The separator is ` : `, always.** Use a colon with one space on each side to split a label from its content and to attach a supporting note, in headings and bullets alike. Replace only mid-line dashes (—, –) used as separators. The hyphen that starts a bullet line is a list marker and stays. One fixed separator lets readers parse "label : content" at a glance, and repeated dashes make text read as machine-written.
+  - Dash : `1. Definition — a joint promotion of up to one month with top stores`
+  - Colon : `1. Definition : a joint promotion of up to one month with top stores`
+  - Bullets stay : in `- Long-term effect unconfirmed : recheck in 4 weeks` the leading `-` stays and only a mid-line dash would change.
+  - The arrow (→) is not a separator. Use it only for "data to action" and "old value to new value".
+- **One term per thing.** Use one official name for each metric and program. Mixing "price", "order value", and "ASP" for the same thing makes readers see three different metrics.
+- **Names, not internal IDs.** Readers remember names, not numbers.
+- **No slang for numbers.** Write "fell sharply" with the figure, not "tanked" or "cratered".
+- **Units on every number.** Thousands separators for amounts and counts, % for ratios. In a table, state the unit once above the table or in the header.
+- **Do not promise what is not confirmed.** Write "decide after a feasibility review", not "launching next year".
+- **Use tables freely.** Comparisons, schedules, before and after, and ownership read faster in a table than in sentences.
+  - Cells hold short phrases or up to three bullets, not sentences.
+  - No bold inside tables. Emphasize in the sentences outside.
+  - Item columns are noun labels (`1. Refund rate trend`), not questions or sentences.
+  - Data tables end with a total row.
+- **Mark unfinished items with `TBD` and an expected date.** `TBD (second draft due next week)`
 
-## 5. 덜어내는 것
+## 5. What to cut
 
-초안을 쓴 뒤 아래에 해당하는 것을 지운다. 지워도 뜻이 달라지지 않는 글자는 독자의 시간을 쓴다.
+After drafting, delete anything below. Words that can go without changing the meaning cost the reader time.
 
-- 결론을 되풀이하는 꼬리표 : `: 목표 모두 달성`
-- 흐름과 무관한 비교 괄호 : `(전일 60.9%)`
-- 같은 뜻의 중복 표시 : '협의 중'에 '(미확정)'을 또 붙이는 것
-- 누구나 아는 일정, 당연한 배경 설명
-- 설명 없이 쓴 통계 용어 : 꼭 필요하면 쉬운 풀이를 한 줄 붙인다
-- 이미 해결된 문제의 긴 경위 : `배송 지연 영향 종료` 한 줄로 줄인다
-- 문서 안의 자기 정정 : '앞서 A라고 했으나 B로 바뀜' 대신 현재 맞는 내용만 적는다
+- Tails that repeat the conclusion : `: all targets met`
+- Comparison parentheses unrelated to the point : `(60.9% the day before)`
+- Double markers for the same state : adding "(unconfirmed)" to "under discussion"
+- Schedules everyone knows, obvious background
+- Statistical terms with no explanation : if one is needed, add a plain one-line gloss
+- Long histories of resolved issues : shorten to `Shipping delay impact ended`
+- Self-corrections inside the document : write only what is true now, not "earlier we said A, now B"
 
-## 6. AI 문체 걷어내기
+## 6. AI-style cleanup
 
-구조가 좋아도 문장에서 기계가 쓴 티가 나면 독자는 내용까지 의심한다. 초안을 쓴 뒤 아래 항목을 걷어낸다. 전체 목록과 고치는 방법은 `references/ai-tells.md`에 있으며, 문장이 많은 문서(요약 단락, 배경 설명, 이메일)를 쓸 때는 그 파일을 읽는다.
+Good structure does not save a document whose sentences read as machine-written. Readers start doubting the content. After drafting, remove the patterns below. The full lists with fixes are in `references/ai-tells.en.md` and `references/ai-tells.ko.md`. Read the one for your output language when the document has many full sentences (summary paragraphs, background, email).
 
-- **번역투** : '~에 대해', '~를 통해', '~에 있어서', '~를 가지고 있다', '~되어진다'를 쓰지 않는다. 조사와 동사로 바로 쓴다('가격에 대해 논의' → '가격을 논의').
-- **상투적인 맺음말** : '시사하는 바가 크다', '주목할 만하다', '결론적으로', '본질적으로'를 지우고 구체적인 결론을 쓴다.
-- **과장 어휘** : '획기적', '압도적', '강력한'을 수치와 사실로 바꾼다.
-- **문장 첫머리 접속사** : '또한', '따라서', '즉', '나아가', '아울러'를 지운다. 순서와 번호가 이미 흐름을 보여 준다.
-- **얼버무림** : '~할 수 있다', '~로 보인다', '~일 것이다'를 줄이고, 확인된 것은 단정한다. 확인되지 않은 것은 '추정'이라고 밝힌다.
-- **균형 맞추기** : '장점도 있지만 단점도 있다'처럼 양쪽을 다 드는 문장으로 끝내지 않고 판단을 적는다.
-- **장식** : 이모지, 따옴표 강조, 굵은 글씨 남발, 줄표를 쓰지 않는다.
-- **같은 틀의 반복** : 모든 불릿이 같은 길이와 같은 끝말이면 기계적으로 보인다. 내용에 따라 길이가 달라지게 둔다.
+- **Stock phrases** : "in conclusion", "it is worth noting", "plays a crucial role", "moving forward". Delete them or write the specific point.
+- **Hype words** : "groundbreaking", "robust", "seamless", "game-changing". Replace with numbers and facts.
+- **Sentence-opening connectives** : "Additionally", "Furthermore", "Moreover". Delete. Order and numbering already show the flow.
+- **Hedging** : "may potentially", "it seems that", "could possibly". State what is confirmed. Label what is not as an estimate.
+- **False balance** : do not end on "there are pros and cons". Write the judgment.
+- **Decoration** : no emoji, no scare quotes for emphasis, no scattered bold, no mid-line dashes.
+- **Uniform rhythm** : bullets that all share one length and one ending look mechanical. Let length follow content.
 
-걷어낼 때 지킬 것이 있다. 수치, 날짜, 고유명사, 인용문은 한 글자도 바꾸지 않는다. 원문에 없던 비유나 꾸밈을 새로 넣지 않는다. 격식 수준은 원문과 같게 유지한다.
+Hold three lines while cleaning. Never change numbers, dates, proper nouns, or quotations. Do not add metaphors or flourishes the original did not have. Keep the original level of formality.
 
-## 기존 문서를 고칠 때
+## Editing an existing document
 
-- **요청받은 부분만 고친다.** 다른 섹션, 문구, 표는 글자 그대로 둔다.
-- **사용자가 직접 고친 부분은 되돌리지 않는다.** 이 스킬의 규칙과 다르더라도 사용자의 수정이 우선한다.
-- **문서에 이미 있는 양식을 따른다.** 제목 단계, 번호 방식, 표 모양은 기존 문서에 맞춘다.
-- 교정을 요청받았으면 전체를 다시 쓰지 말고, 무엇을 왜 바꿨는지 짧게 알린다.
+- **Change only what was requested.** Leave other sections, wording, and tables exactly as they are.
+- **Never revert the user's own edits.** Their changes win even when they differ from this skill's rules.
+- **Follow the document's existing conventions.** Match its heading levels, numbering, and table shapes.
+- When asked to proofread, do not rewrite everything. Say briefly what changed and why.
 
-## 우선순위
+## Priority
 
-사용자나 팀이 정한 양식, 용어, 문체가 있으면 그것이 이 스킬보다 우선한다. 이 스킬은 따로 정한 것이 없을 때의 기본값이다. 한국어가 아닌 언어로 쓸 때는 명사형 종결 대신 그 언어의 간결한 보고서 문체를 쓰고, 나머지 원칙은 그대로 적용한다.
+If the user or their team has set a template, vocabulary, or tone, that comes before this skill. This skill is the default when nothing else is set.
 
-## 내보내기 전 점검
+## Final check
 
-- 소제목만 이어 읽어도 결론이 전달되는가
-- 모든 결론 바로 아래에 근거가 있는가
-- 요약에 추정이 섞여 있지 않은가
-- 수치마다 다음 행동이 이어지는가(필요한 곳에 한해)
-- 한 줄에 지표가 둘 이상 들어간 곳은 없는가
-- 같은 내용이 두 곳에 나오지 않는가
-- 불리한 정보와 한계가 비고에 남아 있는가
-- 블록마다 굵은 줄이 하나 이하인가
-- 구분 기호가 ` : ` 하나로 통일되어 있고 줄표가 남아 있지 않은가
-- 번역투, 상투적인 맺음말, 문장 첫머리 접속사가 남아 있지 않은가
+- Do the headings alone convey the conclusion
+- Does every conclusion have evidence right below it
+- Is the summary free of guesses
+- Does each number lead to an action where one is needed
+- Does any line hold more than one metric
+- Does the same content appear in two places
+- Are unfavorable facts and limits kept in Notes
+- Is there at most one bold line per block
+- Is ` : ` the only separator, with no mid-line dashes left
+- Are stock phrases, hype words, and sentence-opening connectives gone
 
-## 예시
+## Example
 
-**고치기 전**
-
-```
-2. 프로모션 결과
-
-지난주 진행한 무료 배송 프로모션은 전반적으로 좋은 성과를 보였습니다.
-참여 매장 매출 1.9배 · 주문 1.8배 · 전환율 6.4 → 9.8%로 반토막 났던
-지난달 대비 크게 회복했습니다(전월 5.1%). 다만 장기 효과는 아직 확인이
-필요하며 재고 문제도 영향을 줬을 수 있습니다.
-```
-
-**고친 뒤**
+**Before**
 
 ```
-2. 무료 배송 유효 판정 : 다음 달 전체 매장 확대
+2. Promotion results
 
-- **참여 매장 매출 1.9배 → 전체 매장으로 확대**
-  - 근거 : 프로모션 결과 시트(링크)
-  - 매출 1.9배
-  - 주문 1.8배
-  - 전환율 6.4 → 9.8%
-- 사후관리
-  - 확대 후 4주 전환율이 8% 미만이면 재검토
+In conclusion, the free shipping promotion we ran last week delivered
+strong results overall. Participating stores saw revenue up 1.9x, orders
+up 1.8x, and conversion from 6.4% to 9.8%, a major recovery after last
+month tanked (5.1% the month before). That said, further validation may
+be needed regarding the long-term effect, and stock issues could
+potentially have played a role.
+```
 
-비고
-- 장기 효과 미확인 : 4주 뒤 재구매율로 재확인
-- 재고 부족의 영향은 추정, 데이터 미확보
+**After**
+
+```
+2. Free shipping judged effective : roll out to all stores next month
+
+- **Participating store revenue up 1.9x → roll out to all stores**
+  - Source : promotion results sheet (link)
+  - Revenue 1.9x
+  - Orders 1.8x
+  - Conversion 6.4% → 9.8%
+- Follow-up
+  - Review again if 4-week conversion after rollout falls below 8%
+
+Notes
+- Long-term effect unconfirmed : recheck with repurchase rate in 4 weeks
+- Stock shortage impact is an estimate, no data yet
 ```
