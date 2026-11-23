@@ -1,193 +1,200 @@
 # Writing with The Pyramid Principle
 
-**제목만 훑어도 결론이 읽히는 업무 문서를 쓰고 고치는 Claude 스킬입니다.**
+**A Claude skill that writes and edits business documents so the conclusion is readable from the headings alone.**
 
-문서 링크나 본문을 주면 So What, Why So, MECE 세 질문으로 진단하고 고친 본을 돌려줍니다. Confluence, Google Docs, Notion, Word, Apple Notes, Markdown, Slack, 이메일 어디에 쓰는 문서든 같은 원칙을 적용하고 서식만 도구에 맞춥니다.
+Give it a document link or pasted text. It diagnoses the document with three questions (So What, Why So, MECE) and returns a revised version. The same principles apply to Confluence, Google Docs, Notion, Word, Apple Notes, Markdown, Slack, and email. Only the formatting changes per tool.
 
-## 1. 효과 : 같은 내용이 결론과 다음 행동부터 읽힌다
+## 1. Effect : the same content now opens with the conclusion and the next action
 
-고치기 전
-
-```
-2. 프로모션 결과
-
-결론적으로, 지난주 진행한 무료 배송 프로모션은 전반적으로 좋은 성과를
-보였습니다. 참여 매장 매출 1.9배 · 주문 1.8배 · 전환율 6.4 → 9.8%로
-반토막 났던 지난달 대비 크게 회복했습니다. 다만 장기 효과에 대해서는
-아직 확인이 필요할 것으로 보입니다.
-```
-
-고친 뒤
+Before
 
 ```
-2. 무료 배송 유효 판정 : 다음 달 전체 매장 확대
+2. Promotion results
 
-- **참여 매장 매출 1.9배 → 전체 매장으로 확대**
-  - 매출 1.9배
-  - 주문 1.8배
-  - 전환율 6.4 → 9.8%
-- 사후관리
-  - 확대 후 4주 전환율이 8% 미만이면 재검토
-
-비고
-- 장기 효과 미확인 : 4주 뒤 재구매율로 재확인
+In conclusion, the free shipping promotion we ran last week delivered
+strong results overall. Participating stores saw revenue up 1.9x, orders
+up 1.8x, and conversion from 6.4% to 9.8%, a major recovery after last
+month tanked. That said, further validation may be needed regarding the
+long-term effect.
 ```
 
-| 바뀐 점 | 적용한 원칙 |
+After
+
+```
+2. Free shipping judged effective : roll out to all stores next month
+
+- **Participating store revenue up 1.9x → roll out to all stores**
+  - Revenue 1.9x
+  - Orders 1.8x
+  - Conversion 6.4% → 9.8%
+- Follow-up
+  - Review again if 4-week conversion after rollout falls below 8%
+
+Notes
+- Long-term effect unconfirmed : recheck with repurchase rate in 4 weeks
+```
+
+| What changed | Principle applied |
 |---|---|
-| 주제어 제목 → 결론 문장 제목 | So What |
-| '좋은 성과' → 수치와 다음 행동 | So What, Why So |
-| 한 줄에 지표 셋 → 한 줄에 하나 | MECE |
-| 문장 끝에 묻힌 한계 → 비고로 분리 | MECE |
-| '결론적으로', '~에 대해서는', '반토막' 삭제 | AI 문체 걷어내기 |
+| Topic heading → conclusion heading | So What |
+| "Strong results" → numbers and a next action | So What, Why So |
+| Three metrics on one line → one per line | MECE |
+| Caveat buried in a sentence → moved to Notes | MECE |
+| "In conclusion", "regarding", "tanked" removed | AI-style cleanup |
 
-수치는 그대로입니다. 순서와 구조만 바꿨습니다.
+No number changed. Only the order and the structure did.
 
-## 2. 원리 : 결론을 꼭대기에 두고 근거를 아래로 쌓는다
+## 2. Principle : put the conclusion on top and stack the evidence below
 
-업무 문서의 독자는 바쁘고, 문서를 끝까지 읽지 않습니다. 결론을 맨 위에 두면 첫 줄에서 멈춘 독자도 결론은 가져갑니다.
+Readers of business documents are busy and rarely read to the end. With the conclusion on top, a reader who stops at the first line still leaves with the conclusion.
 
 ```
-                  결론
-        ┌──────────┼──────────┐
-      근거 1      근거 2      근거 3
-        │          │          │
-     수치·출처   수치·출처   수치·출처
+                  Conclusion
+        ┌─────────────┼─────────────┐
+    Evidence 1    Evidence 2    Evidence 3
+        │             │             │
+     numbers       numbers       numbers
+     sources       sources       sources
 
-  아래 → 위   So What : 그래서 무엇인가
-  위 → 아래   Why So  : 왜 그런가
-  같은 층     MECE    : 겹치거나 빠진 것은 없는가
+  Bottom → top   So What : what does this mean
+  Top → bottom   Why So  : why is that true
+  Same level     MECE    : no overlaps, no gaps
 ```
 
-| 원칙 | 방향 | 묻는 것 | 대표 규칙 |
+| Principle | Direction | Question | Typical rule |
 |---|---|---|---|
-| So What | 아래 → 위 | 그래서 결론이 무엇인가 | 소제목을 결론 문장으로, 수치 뒤에 할 일을 화살표로 |
-| Why So | 위 → 아래 | 왜 그렇게 말할 수 있는가 | 결론 바로 아래에 근거 수치와 출처, 추정은 요약에서 제외 |
-| MECE | 같은 층 | 빠지거나 겹친 것은 없는가 | 불릿 하나에 지표 하나, 불리한 정보는 비고에 남기기 |
+| So What | Bottom → top | What is the conclusion | Headings state conclusions, numbers lead to an action with an arrow |
+| Why So | Top → bottom | Why can we say that | Numbers and sources sit right below each conclusion, guesses stay out of the summary |
+| MECE | Same level | Is anything missing or duplicated | One metric per bullet, unfavorable facts stay in Notes |
 
-세 원칙 위에 문장 규칙 두 가지를 더합니다.
+Two sentence-level rules sit on top of the three principles.
 
-- 구분 기호 고정 : `1. 정의 — 내용`이 아니라 `1. 정의 : 내용`
-- AI 문체 걷어내기 : 번역투, 상투적인 맺음말, 과장 어휘, 문장 첫머리 접속사
+- One separator : write `1. Definition : content`, not `1. Definition — content`
+- AI-style cleanup : translationese, stock closing phrases, hype words, sentence-opening connectives
 
-피라미드 구조는 바바라 민토의 『The Pyramid Principle』(한국어판 『논리의 기술』)에서 나왔습니다. So What, Why So, MECE를 한 묶음으로 정리한 책은 데루야 하나코와 오카다 게이코의 『로지컬 씽킹』입니다. 이 스킬은 두 책의 원칙을 업무 문서에 바로 쓰는 규칙으로 옮겼습니다.
+The pyramid structure comes from Barbara Minto's *The Pyramid Principle*. *Logical Thinking* by Hanako Teruya and Keiko Okada grouped So What, Why So, and MECE into one set. This skill turns the principles of both books into rules you can apply to a working document.
 
-## 3. 적용 대상 : 업무 문서는 전부, 창작 글은 제외
+## 3. Scope : every business document, no creative writing
 
-- 쓰는 곳
-  - 보고서, 주간 보고, 회의록
-  - 기획안, 제안서, 분석 리포트
-  - 위키 페이지, 메모, 업무 이메일
-- 쓰지 않는 곳
-  - 소설, 에세이, 광고 문구
-  - 코드 주석
+- Use it for
+  - Reports, weekly updates, meeting notes
+  - Plans, proposals, analysis write-ups
+  - Wiki pages, memos, work email
+- Do not use it for
+  - Fiction, essays, ad copy
+  - Code comments
 
-원칙 이름을 말하지 않아도 동작합니다. '결론부터', '두괄식으로', '개조식으로', '이 글 다듬어줘'라고 하거나 문서 링크만 줘도 이 스킬이 적용됩니다.
+You do not need to name the principles. Saying "conclusion first", "make this tighter", or just sharing a document link triggers the skill.
 
-## 4. 작동 방식 : 진단을 먼저 알리고 원본은 건드리지 않는다
+## 4. How it works : diagnosis first, original untouched
 
-1. 독자와 용도 확인 : 누가 읽고 무엇을 결정하는지 정합니다. 알 수 없으면 한 번만 묻습니다.
-2. 진단 : So What, Why So, MECE 축별로 가장 큰 문제를 한두 줄씩 알립니다.
-3. 고친 본 작성 : 원문의 사실, 수치, 고유명사는 바꾸지 않습니다.
-4. 도구에 맞춘 출력 : 받은 문서와 같은 도구의 서식으로 돌려줍니다.
+1. Reader and purpose : it identifies who reads the document and what they decide. If unclear, it asks once.
+2. Diagnosis : it reports the biggest problem on each axis (So What, Why So, MECE) in a line or two.
+3. Revision : it keeps every fact, number, and proper noun from the original.
+4. Tool-ready output : it returns the result in the formatting of the tool the document came from.
 
-지키는 선이 세 가지 있습니다.
+It holds three lines.
 
-- 근거 없는 결론은 지어내지 않고 '근거 필요'로 표시
-- 원본 문서는 덮어쓰지 않고 고친 본을 따로 제시
-- 직접 수정을 요청받아도 요청받은 부분만 수정
+- Conclusions without evidence are marked "evidence needed", never invented
+- The original document is not overwritten : the revision is delivered separately
+- When asked to edit in place, it changes only the requested part
 
-## 5. 설치 : 명령 두 줄
+## 5. Install : two commands
 
-Claude Code에서 플러그인으로 설치합니다.
+Install as a plugin in Claude Code.
 
 ```
 /plugin marketplace add junhyuk-yoon/pyramid-writing
 /plugin install pyramid-writing@pyramid-writing
 ```
 
-플러그인 없이 폴더만 복사해도 됩니다.
+Or copy the folder without the plugin system.
 
 ```bash
 git clone https://github.com/junhyuk-yoon/pyramid-writing.git
 cp -r pyramid-writing/skills/pyramid-writing ~/.claude/skills/
 ```
 
-Claude 앱(claude.ai, 데스크톱)에서는 zip으로 올립니다.
+For the Claude apps (claude.ai, desktop), upload a zip.
 
-1. 이 저장소를 내려받습니다.
-2. `skills/pyramid-writing` 폴더를 zip으로 압축합니다.
-3. 설정의 스킬 메뉴에서 zip 파일을 올립니다.
+1. Download this repository.
+2. Zip the `skills/pyramid-writing` folder.
+3. Upload the zip in the Skills menu under Settings.
 
-## 6. 사용 예 : 링크나 본문만 주면 된다
-
-```
-이 문서를 피라미드 원칙으로 고쳐줘 : <문서 링크>
-```
+## 6. Usage : a link or pasted text is enough
 
 ```
-아래 회의 메모를 주간 보고로 정리해줘. Notion에 붙여 넣을 거야.
-<메모 본문>
+Rewrite this document with the pyramid principle : <document link>
 ```
 
 ```
-이 보고서 초안에서 So What이 약한 부분만 짚어줘.
+Turn these meeting notes into a weekly update. I will paste it into Notion.
+<notes>
 ```
 
-링크로 준 문서를 Claude가 읽으려면 해당 도구의 커넥터(Atlassian, Google Drive, Notion 등)가 연결되어 있어야 합니다. 연결되어 있지 않으면 본문을 붙여 넣으면 됩니다.
+```
+Point out only the places in this draft where the So What is weak.
+```
 
-## 7. 도구별 출력 : 구조는 같고 서식만 바뀐다
+To read a linked document, Claude needs the connector for that tool (Atlassian, Google Drive, Notion, and so on). Without a connector, paste the text.
 
-| 도구 | 맞추는 것 |
+## 7. Output per tool : same structure, different formatting
+
+| Tool | What it adapts |
 |---|---|
-| Confluence | 제목 단계, 날짜와 상태 기능, 셀 안 불릿 |
-| Google Docs | 제목 스타일, 목록 단계 1 → a → i |
-| Notion | 콜아웃, 토글, 반복 항목은 데이터베이스 |
-| Word | 제목 스타일, 표 머리글 행 반복 |
-| Apple Notes | 2단계 불릿, 3열 이내의 단순한 표 |
-| Markdown | 셀 안 불릿 대신 짧은 구 |
-| Slack, 이메일 | 첫 줄에 결론, 긴 내용은 링크로 |
+| Confluence | Heading levels, date and status elements, bullets inside cells |
+| Google Docs | Heading styles, list levels 1 → a → i |
+| Notion | Callouts, toggles, databases for repeating items |
+| Word | Heading styles, repeating table header row |
+| Apple Notes | Two bullet levels, simple tables of up to three columns |
+| Markdown | Short phrases in cells in place of bullets |
+| Slack, email | Conclusion on the first line, long content behind a link |
 
-제목 기능이나 표가 없는 도구에서는 굵은 한 줄과 불릿으로 같은 구조를 만듭니다.
+In tools without headings or tables, it builds the same structure from one bold line and bullets.
 
-## 8. 점검 : 내보내기 전에 스스로 확인한다
+## 8. Self-check : it verifies the output before returning it
 
-- 소제목만 이어 읽어도 결론이 전달되는가
-- 모든 결론 바로 아래에 근거가 있는가
-- 요약에 추정이 섞여 있지 않은가
-- 한 줄에 지표가 둘 이상 들어간 곳은 없는가
-- 같은 내용이 두 곳에 나오지 않는가
-- 불리한 정보와 한계가 비고에 남아 있는가
-- 블록마다 굵은 줄이 하나 이하인가
-- 구분 기호가 ` : ` 하나로 통일되어 있는가
-- 번역투와 상투적인 맺음말이 남아 있지 않은가
+- Do the headings alone convey the conclusion
+- Does every conclusion have evidence right below it
+- Is the summary free of guesses
+- Does any line hold more than one metric
+- Does the same content appear in two places
+- Are unfavorable facts and limits kept in Notes
+- Is there at most one bold line per block
+- Is ` : ` the only separator
+- Are translationese and stock closing phrases gone
 
-## 9. 파일 구성 : 규칙 1개와 참고 2개
+## 9. Files : one rule file and two references
 
 ```
 skills/pyramid-writing/
-├── SKILL.md              전체 규칙과 작업 순서
+├── SKILL.md              all rules and the workflow
 └── references/
-    ├── tools.md          도구별 서식
-    └── ai-tells.md       걷어낼 AI 문체 목록
+    ├── tools.md          formatting per tool
+    └── ai-tells.md       AI-style patterns to remove
 ```
 
-## 10. 우선순위 : 팀이 정한 양식이 이 스킬보다 앞선다
+## 10. Language : written in Korean, usable in any language
 
-- 팀이나 개인이 정한 양식과 용어가 있으면 그것을 따름
-- 사용자가 직접 고친 부분은 이 스킬의 규칙과 달라도 되돌리지 않음
-- 한국어가 아닌 언어에서는 그 언어의 간결한 보고서 문체를 쓰고 나머지 원칙은 그대로 적용
+- The skill files are written in Korean and tuned for Korean business documents
+- The structural rules (So What, Why So, MECE, one separator) apply to any language
+- The AI-style list in `ai-tells.md` targets Korean patterns : in other languages the skill applies the concise report style of that language
 
-## 11. 참고한 자료 : 책 2권과 스킬 1개
+## 11. Priority : your team's conventions come first
 
-- Barbara Minto, 『The Pyramid Principle: Logic in Writing and Thinking』 : 피라미드 구조와 MECE의 원전
-- 데루야 하나코, 오카다 게이코, 『로지컬 씽킹』 : So What, Why So, MECE 묶음의 정리
-- [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai) (MIT) : AI 문체 목록의 분류를 참고해 업무 문서용으로 추림
+- If your team or you have a set template or vocabulary, the skill follows that
+- Edits you made yourself are never reverted, even when they differ from the skill's rules
 
-이 스킬은 위 책의 저자나 출판사와 관계가 없는 개인 프로젝트입니다. 칼럼 같은 긴 글의 윤문에는 im-not-ai를 함께 쓰기를 권합니다.
+## 12. References : two books and one skill
 
-## 12. 라이선스 : MIT
+- Barbara Minto, *The Pyramid Principle: Logic in Writing and Thinking* : the source of the pyramid structure and MECE
+- Hanako Teruya and Keiko Okada, *Logical Thinking* : the So What, Why So, MECE set
+- [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai) (MIT) : the taxonomy behind the AI-style list, trimmed for business documents
+
+This is a personal project with no affiliation with the authors or publishers above. For polishing long-form prose in Korean, use im-not-ai alongside this skill.
+
+## 13. License : MIT
 
 ---
 
-이 README는 이 스킬을 적용해 작성했습니다. 소제목은 '이름 : 결론' 꼴이고, 구분 기호는 ` : ` 하나이며, 굵은 글씨는 본문 전체에서 맨 위 한 줄뿐입니다.
+This README was written with this skill. Every heading is a "name : conclusion" pair, ` : ` is the only separator, and the single bold line in the body is the one at the top.
