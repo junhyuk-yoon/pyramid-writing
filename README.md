@@ -102,21 +102,21 @@
 Claude Code에서 플러그인으로 설치합니다.
 
 ```
-/plugin marketplace add junhyuk-yoon/writing-with-the-pyramid-principle
-/plugin install writing-with-the-pyramid-principle@writing-with-the-pyramid-principle
+/plugin marketplace add junhyuk-yoon/pyramid-writing
+/plugin install pyramid-writing@pyramid-writing
 ```
 
 플러그인 없이 폴더만 복사해도 됩니다.
 
 ```bash
-git clone https://github.com/junhyuk-yoon/writing-with-the-pyramid-principle.git
-cp -r writing-with-the-pyramid-principle/skills/writing-with-the-pyramid-principle ~/.claude/skills/
+git clone https://github.com/junhyuk-yoon/pyramid-writing.git
+cp -r pyramid-writing/skills/pyramid-writing ~/.claude/skills/
 ```
 
 Claude 앱(claude.ai, 데스크톱)에서는 zip으로 올립니다.
 
 1. 이 저장소를 내려받습니다.
-2. `skills/writing-with-the-pyramid-principle` 폴더를 zip으로 압축합니다.
+2. `skills/pyramid-writing` 폴더를 zip으로 압축합니다.
 3. 설정의 스킬 메뉴에서 zip 파일을 올립니다.
 
 ## 6. 사용 예 : 링크나 본문만 주면 된다
@@ -165,7 +165,7 @@ Claude 앱(claude.ai, 데스크톱)에서는 zip으로 올립니다.
 ## 9. 파일 구성 : 규칙 1개와 참고 2개
 
 ```
-skills/writing-with-the-pyramid-principle/
+skills/pyramid-writing/
 ├── SKILL.md              전체 규칙과 작업 순서
 └── references/
     ├── tools.md          도구별 서식

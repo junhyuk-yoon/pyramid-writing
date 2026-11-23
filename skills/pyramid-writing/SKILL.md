@@ -1,5 +1,5 @@
 ---
-name: writing-with-the-pyramid-principle
+name: pyramid-writing
 description: 피라미드 원칙(Pyramid Principle)의 So What · Why So · MECE로 업무 문서를 쓰고 고치는 스킬. 보고서, 주간 보고, 회의록, 기획안, 제안서, 분석 리포트, 위키 페이지, 메모를 작성·요약·교정할 때 사용한다. Confluence, Google Docs, Notion, Word, Apple Notes, Markdown, Slack, 이메일 등 어떤 도구에 쓰든 적용한다. 사용자가 "보고서 써줘", "문서 정리해줘", "회의록 정리", "개조식으로", "결론부터", "두괄식으로", "MECE하게", "피라미드 구조로", "이 글 다듬어줘", "write a report", "status update", "executive summary"처럼 말하거나, 문서 링크나 본문을 주면서 고쳐 달라, 검토해 달라고 하면 원칙 이름을 직접 언급하지 않아도 이 스킬을 쓴다. 소설·에세이·광고 문구 같은 창작 글과 코드 주석에는 쓰지 않는다.
 ---
 

@@ -1,11 +1,11 @@
 {
-  "name": "writing-with-the-pyramid-principle",
+  "name": "pyramid-writing",
   "owner": {
     "name": "junhyuk-yoon"
   },
   "plugins": [
     {
-      "name": "writing-with-the-pyramid-principle",
+      "name": "pyramid-writing",
       "source": "./",
       "description": "So What · Why So · MECE 원칙으로 업무 문서를 쓰고 고치는 스킬"
     }
