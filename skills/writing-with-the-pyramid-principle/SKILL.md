@@ -1,11 +1,11 @@
 ---
-name: so-what-mece
-description: So What · Why So · MECE 원칙으로 업무 문서를 쓰고 고치는 스킬. 보고서, 주간 보고, 회의록, 기획안, 제안서, 분석 리포트, 위키 페이지, 메모를 작성·요약·교정할 때 사용한다. Confluence, Google Docs, Notion, Word, Apple Notes, Markdown, Slack, 이메일 등 어떤 도구에 쓰든 적용한다. 사용자가 "보고서 써줘", "문서 정리해줘", "회의록 정리", "개조식으로", "결론부터", "두괄식으로", "MECE하게", "이 글 다듬어줘", "write a report", "status update", "executive summary"처럼 말하거나, 문서 링크나 본문을 주면서 고쳐 달라, 검토해 달라고 하면 원칙 이름을 직접 언급하지 않아도 이 스킬을 쓴다. 소설·에세이·광고 문구 같은 창작 글과 코드 주석에는 쓰지 않는다.
+name: writing-with-the-pyramid-principle
+description: 피라미드 원칙(Pyramid Principle)의 So What · Why So · MECE로 업무 문서를 쓰고 고치는 스킬. 보고서, 주간 보고, 회의록, 기획안, 제안서, 분석 리포트, 위키 페이지, 메모를 작성·요약·교정할 때 사용한다. Confluence, Google Docs, Notion, Word, Apple Notes, Markdown, Slack, 이메일 등 어떤 도구에 쓰든 적용한다. 사용자가 "보고서 써줘", "문서 정리해줘", "회의록 정리", "개조식으로", "결론부터", "두괄식으로", "MECE하게", "피라미드 구조로", "이 글 다듬어줘", "write a report", "status update", "executive summary"처럼 말하거나, 문서 링크나 본문을 주면서 고쳐 달라, 검토해 달라고 하면 원칙 이름을 직접 언급하지 않아도 이 스킬을 쓴다. 소설·에세이·광고 문구 같은 창작 글과 코드 주석에는 쓰지 않는다.
 ---
 
-# So What · Why So · MECE 문서 작성
+# Writing with The Pyramid Principle
 
-업무 문서의 독자는 바쁘고, 문서를 끝까지 읽지 않는다. 그래서 문서는 세 가지 질문에 순서대로 답해야 한다.
+업무 문서의 독자는 바쁘고, 문서를 끝까지 읽지 않는다. 그래서 결론을 꼭대기에 두고 근거를 아래로 쌓는 피라미드 구조로 쓴다. 피라미드는 세 가지 질문으로 점검한다. 아래에서 위로 읽으면 So What에, 위에서 아래로 읽으면 Why So에 답이 되어야 하고, 같은 층의 항목끼리는 MECE여야 한다.
 
 - **So What** : 그래서 결론이 무엇이고, 무엇을 해야 하는가
 - **Why So** : 왜 그렇게 말할 수 있는가
