@@ -23,7 +23,7 @@ long-term effect.
 After
 
 ```
-2. Free shipping judged effective : roll out to all stores next month
+2. Promotion results : free shipping judged effective, roll out to all stores next month
 
 - **Participating store revenue up 1.9x → roll out to all stores**
   - Revenue 1.9x
@@ -38,7 +38,7 @@ Notes
 
 | What changed | Principle applied |
 |---|---|
-| Topic heading → conclusion heading | So What |
+| Topic heading → `keyword : conclusion` heading | So What |
 | "Strong results" → numbers and a next action | So What, Why So |
 | Three metrics on one line → one per line | MECE |
 | Caveat buried in a sentence → moved to Notes | MECE |
@@ -65,7 +65,7 @@ Readers of business documents are busy and rarely read to the end. With the conc
 
 | Principle | Direction | Question | Typical rule |
 |---|---|---|---|
-| So What | Bottom → top | What is the conclusion | Headings state conclusions, numbers lead to an action with an arrow |
+| So What | Bottom → top | What is the conclusion | Headings read `keyword : conclusion`, numbers lead to an action with an arrow |
 | Why So | Top → bottom | Why can we say that | Numbers and sources sit right below each conclusion, guesses stay out of the summary |
 | MECE | Same level | Is anything missing or duplicated | One metric per bullet, unfavorable facts stay in Notes |
 
@@ -161,7 +161,7 @@ In tools without headings or tables, it builds the same structure from one bold 
 
 ## 8. Self-check : it verifies the output before returning it
 
-- Do the headings alone convey the conclusion
+- Is every heading a `keyword : conclusion` pair, and do the headings alone convey the conclusion
 - Does every conclusion have evidence right below it
 - Is the summary free of guesses
 - Does any line hold more than one metric
