@@ -42,9 +42,13 @@ If the user gives only a link or text with no further instruction, treat it as a
 
 ## 1. So What : conclusion first, in one line
 
-- **The heading is the conclusion.** Write section headings as conclusions, not topics. The table of contents alone should tell the story.
-  - Topic : `3. Repurchase rate status`
-  - Conclusion : `3. Repurchase rate is falling : customers leave within 30 days of first purchase`
+- **The heading is `keyword : conclusion`.** Open every section heading with a short topic keyword, then state the conclusion after ` : `. The keyword tells the reader where they are, and the conclusion tells them what to take away. A topic alone says nothing, and a conclusion alone is hard to scan and to point at in a meeting. The table of contents alone should tell the story.
+  - Topic only : `3. Repurchase rate status`
+  - Conclusion only : `3. Customers leave within 30 days of first purchase, so the repurchase rate is falling`
+  - Keyword : conclusion : `3. Repurchase rate : falling, customers leave within 30 days of first purchase`
+  - Keep the keyword a noun label of a few words (`Comparison by type`, `Purchase path`, `Legal review`), and reuse the label a reader would search for.
+  - Keep the conclusion to one short point. The rest goes to the first bullet.
+  - Subheadings follow the same shape : `3-1. Entry path : 57% arrive from a list search`
 - **A first-level bullet is one conclusion line.** Keep it short and declarative. Drop spoken filler such as "we are pleased to share" or "as you can see".
 - **One bold line per block.** Bold only the line that carries the judgment or decision. When several lines are bold, nothing stands out.
 - **Connect data to action with an arrow.** Do not stop at the number. Attach what to do.
@@ -52,7 +56,7 @@ If the user gives only a link or text with no further instruction, treat it as a
 - **List only actions you can take.** Things you can only watch are monitoring, not actions.
 - **No caveats in a decision heading.** Move limits and conditions to sub-bullets. A parenthetical caveat in the heading leaves the reader unsure whether a decision was made.
   - With caveat : `Free shipping : effective (though long-term effect needs more validation)`
-  - Without : `Free shipping judged effective : roll out to all stores next month`
+  - Without : `Free shipping : judged effective, roll out to all stores next month`
 
 ## 2. Why So : evidence right below every conclusion
 
@@ -141,7 +145,7 @@ If the user or their team has set a template, vocabulary, or tone, that comes be
 
 ## Final check
 
-- Do the headings alone convey the conclusion
+- Is every heading a `keyword : conclusion` pair, and do the headings alone convey the conclusion
 - Does every conclusion have evidence right below it
 - Is the summary free of guesses
 - Does each number lead to an action where one is needed
@@ -170,7 +174,7 @@ potentially have played a role.
 **After**
 
 ```
-2. Free shipping judged effective : roll out to all stores next month
+2. Promotion results : free shipping judged effective, roll out to all stores next month
 
 - **Participating store revenue up 1.9x → roll out to all stores**
   - Source : promotion results sheet (link)

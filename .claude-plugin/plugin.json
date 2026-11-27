@@ -1,7 +1,7 @@
 {
   "name": "pyramid-writing",
   "description": "A Claude skill that writes and edits business documents with the Pyramid Principle : So What, Why So, MECE.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "junhyuk-yoon"
   },
